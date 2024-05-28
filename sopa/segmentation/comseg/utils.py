@@ -29,7 +29,6 @@ def add_centroids_to_sdata(sdata: SpatialData,
     if z_constant is not None:
         z_centroid = [z_constant] * len(y_centroid)
         coords = pd.DataFrame({"x": x_centroid, "y": y_centroid, "z": z_centroid})
-
     else:
         if "z" in sdata[points_key].columns:
             z = list(sdata[points_key].z.unique().compute())
