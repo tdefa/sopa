@@ -4,9 +4,6 @@ import pandas as pd
 from sopa._sdata import to_intrinsic
 from spatialdata import SpatialData
 
-gene_column: str | None = None,
-area_ratio_threshold: float = 0.25,
-
 
 def add_centroids_to_sdata(sdata: SpatialData,
                            points_key: str = "transcripts",
