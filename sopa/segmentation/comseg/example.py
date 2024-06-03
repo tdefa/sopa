@@ -9,7 +9,7 @@ import numpy as np
 import sopa
 from pathlib import Path
 import pandas as pd
-from sopa.segmentation.comseg import add_centroids_to_sdata
+#from sopa.segmentation.comseg import add_centroids_to_sdata
 from spatialdata import SpatialData, read_zarr
 import json
 

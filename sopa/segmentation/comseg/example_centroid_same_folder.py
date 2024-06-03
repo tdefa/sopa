@@ -9,7 +9,7 @@ import numpy as np
 import sopa
 from pathlib import Path
 import pandas as pd
-#from sopa.segmentation.comseg import add_centroids_to_sdata
+#from sopa.segmentation.comseg import git
 from spatialdata import SpatialData, read_zarr
 import json
 from sopa import segmentation
@@ -107,6 +107,7 @@ for patch_index in tqdm(range(4)):
                     return_polygon = True,
                     alpha = config["alpha"],
                     min_rna_per_cell = config["min_rna_per_cell"])
+
     anndata_comseg.write_loom(path_dataset_folder / 'segmentation_counts.loom')
     with open(path_dataset_folder / "segmentation_polygons.json", 'w') as f:
         json.dump(json_dict['transcripts'], f)
